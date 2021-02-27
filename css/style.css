@@ -1,0 +1,210 @@
+/*common style */
+* {
+  font-family: "Ranchers", cursive;
+}
+#main {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(34deg, #05e8fe, #ea01fc);
+  font-family: "Ranchers", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* form style */
+#form {
+  /* display: none; */
+  border-radius: 20px;
+  width: 60%;
+  height: 40%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#form h1 {
+  word-spacing: 5px;
+  letter-spacing: 3px;
+  text-align: center;
+  font-size: 30px;
+  padding: 20px 0px 20px 0px;
+}
+#form label {
+  letter-spacing: 1px;
+  padding-left: 39px;
+  font-weight: 500;
+}
+#form .name {
+  margin-bottom: 25px;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+#form .name input[type="text"] {
+  outline: none;
+  background-color: #088160;
+  border: 2px solid rgba(0, 174, 255, 0.349);
+  border-radius: 6px;
+  width: 40%;
+  height: 30px;
+  font-family: "Ranchers", cursive;
+  text-align: center;
+}
+
+#form .name input[type="text"]:focus {
+  border: 2px solid rgb(0 8 255 / 35%);
+  background-color: rgb(0 8 255 / 35%);
+  box-shadow: 8px 10px 11px rgb(0 8 255 / 35%);
+}
+::placeholder {
+  font-family: "Ranchers", cursive;
+  letter-spacing: 1px;
+  color: black;
+  font-weight: 500;
+  text-align: center;
+}
+/* error message style */
+#usermsg {
+  display: none;
+  position: absolute;
+  color: rgba(255, 6, 6, 0.959);
+  left: 0;
+  right: 0;
+}
+/* form btn style */
+#form button[type="button"] {
+  outline: none;
+  font-family: "Ranchers", cursive;
+  letter-spacing: 1px;
+  font-size: 23px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #088160;
+  border: 1px solid rgba(0, 174, 255, 0.349);
+  border-radius: 25px;
+  width: 30%;
+  transition: 0.8s;
+}
+#form button[type="button"]:hover {
+  border: 2px solid rgb(0 8 255 / 35%);
+  background-color: rgb(0 8 255 / 35%);
+  box-shadow: 8px 10px 11px rgb(0 8 255 / 35%);
+}
+
+#game-section {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Ranchers", cursive;
+  display: none;
+  flex-direction: column;
+}
+#g-sec-top {
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#g-sec-middle {
+  height: 60%;
+  background-color: green;
+  display: flex;
+  flex-direction: row;
+}
+#g-sec-bottom {
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-icon-sec {
+  width: 50px;
+  background-color: #0000008f;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  color: white;
+  font-size: 20px;
+  margin: 20px;
+}
+.top-icon {
+  color: rgb(255, 255, 255);
+  font-size: 45px;
+  transition: 1s;
+}
+.top-icon-sec:hover {
+  background-color: rgba(255, 255, 255, 0.37);
+  color: #000;
+}
+.top-icon:hover {
+  color: #000;
+}
+.player-details {
+  width: auto;
+  height: 50px;
+  background-color: #0000008f;
+  padding: 0 10px;
+}
+#left-player {
+  flex-basis: 50%;
+  background-color: rgb(0, 13, 128);
+  overflow: hidden;
+  position: relative;
+}
+.right-computer {
+  flex-basis: 50%;
+}
+.bottom-box {
+  background-color: #00000099;
+  height: 80%;
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  justify-content: space-evenly;
+  color: white;
+  font-size: 20px;
+}
+.left-p-c-box {
+  border-radius: 0px 10px 10px 0;
+}
+.right-p-c-box {
+  border-radius: 10px 0px 0px 10px;
+}
+.controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.controls span img {
+  width: 80px;
+  height: auto;
+}
+.controls span img:hover {
+  width: 87px;
+  height: auto;
+}
+
+.p-rock,
+.c-rock,
+.p-papper,
+.c-papper,
+.c-scissors,
+.p-scissors {
+  width: 87px;
+  height: 87px;
+}
+.big-img {
+  position: absolute;
+  top: 22%;
+  left: -94%;
+  height: 280px;
+}
