@@ -1,7 +1,7 @@
 let gameSection = document.querySelector("#game-section");
 
 let playerDetails = document.querySelector(".player-details");
-
+let leftPlayer = document.querySelector(".Player-name");
 let formButton = document.getElementById("button");
 let playerName;
 // form validation starts
@@ -23,6 +23,7 @@ formButton.addEventListener("click", () => {
     form.style.display = "none";
     gameSection.style.display = "flex";
     playerDetails.textContent = `${playerName} VS Jarvis`;
+    leftPlayer.textContent = `${playerName}'s points `;
     document.getElementById("username").value = "";
   }
   return playerName;
@@ -31,10 +32,13 @@ formButton.addEventListener("click", () => {
 // form validation ends
 
 window.onload = () => {
+  playerName = sessionStorage.getItem("playername");
   let game = sessionStorage.getItem("game");
   if (game == "true") {
     gameSection.style.display = "flex";
     form.style.display = "none";
+    playerDetails.textContent = `${playerName} VS Jarvis`;
+    leftPlayer.textContent = `${playerName}'s points `;
   }
 };
 
@@ -54,12 +58,10 @@ buttons.forEach((button, index) => {
     console.log(randomPlay);
 
     player(index);
-    // jarvis(randomPlay);
 
     while (randomPlay > 2) {
       randomPlay = Math.floor(randomPlay / 2);
     }
-    // console.log(randomPlay);
     let bigImgRight = document.createElement("img");
     let imagesRight = [
       "../assets/rock-right.png",

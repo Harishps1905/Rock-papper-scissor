@@ -194,10 +194,7 @@
 }
 
 .p-rock,
-.c-rock,
 .p-papper,
-.c-papper,
-.c-scissors,
 .p-scissors {
   width: 87px;
   height: 87px;
@@ -213,4 +210,15 @@
   top: 22%;
   right: -94%;
   height: 280px;
+}
+
+.flex {
+  display: flex;
+}
+
+#dots {
+  flex-direction: row;
+  margin: 0 10px;
+  justify-content: space-around;
+  flex-basis: 60%;
 }
