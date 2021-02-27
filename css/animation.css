@@ -1,6 +1,6 @@
 @keyframes bigimage {
   0% {
-    left: -10%;
+    left: -0%;
   }
   30% {
     left: 40%;
@@ -27,5 +27,37 @@
     top: 22%;
 
     left: 40%;
+  }
+}
+
+@keyframes bigimageRight {
+  0% {
+    right: -0%;
+  }
+  30% {
+    right: 20%;
+  }
+  60% {
+    top: 18%;
+    right: 20%;
+  }
+  70% {
+    top: 25%;
+    right: 20%;
+  }
+  80% {
+    top: 18%;
+
+    right: 20%;
+  }
+  90% {
+    top: 25%;
+
+    right: 20%;
+  }
+  100% {
+    top: 22%;
+
+    right: 20%;
   }
 }

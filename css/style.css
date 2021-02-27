@@ -208,3 +208,9 @@
   left: -94%;
   height: 280px;
 }
+.big-img-right {
+  position: absolute;
+  top: 22%;
+  right: -94%;
+  height: 280px;
+}
