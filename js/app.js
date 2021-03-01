@@ -4,6 +4,11 @@ let playerDetails = document.querySelector(".player-details");
 let leftPlayer = document.querySelector(".Player-name");
 let formButton = document.getElementById("button");
 let playerName;
+let refresh = document.querySelector(".refresh");
+
+refresh.addEventListener("click", () => {
+  location.reload();
+});
 // form validation starts
 formButton.addEventListener("click", () => {
   let uname = document.getElementById("username").value;
@@ -52,6 +57,8 @@ let buttons = document.querySelectorAll(".p-controls span");
 let imgCont = document.querySelector("#left-player");
 let imgContRight = document.querySelector("#right-computer");
 
+let pointGain = 0;
+let pointlose = 0;
 buttons.forEach((button, index) => {
   button.addEventListener("click", () => {
     let randomPlay = Math.floor(Math.random() * 10);
@@ -79,6 +86,10 @@ buttons.forEach((button, index) => {
     });
     console.log(randomPlay);
 
+    let dots = document.querySelectorAll("#dots .dot");
+    console.log(dots.length);
+    let dotsAi = document.querySelectorAll("#dots-ai .dot");
+
     if (index === randomPlay) {
       setTimeout(() => {
         alert("you tie");
@@ -88,17 +99,24 @@ buttons.forEach((button, index) => {
       (index == 1 && randomPlay == 0) ||
       (index == 2 && randomPlay == 1)
     ) {
+      dots[pointGain].style.background = "green";
+      pointGain++;
       setTimeout(() => {
-        alert("you win");
+        alert("you gain a point");
       }, 5000);
+      pointGain == 5 ? alert("you won the tournament......") : false;
     } else if (
       (index == 0 && randomPlay == 1) ||
       (index == 1 && randomPlay == 2) ||
       (index == 2 && randomPlay == 0)
     ) {
+      dotsAi[pointlose].style.background = "green";
+      pointlose++;
+
       setTimeout(() => {
-        alert("you lose");
+        alert("you lose a point");
       }, 5000);
+      pointlose == 5 ? alert("you lose the tournament......") : false;
     }
   });
 });
