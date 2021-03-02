@@ -99,24 +99,23 @@ buttons.forEach((button, index) => {
       (index == 1 && randomPlay == 0) ||
       (index == 2 && randomPlay == 1)
     ) {
-      dots[pointGain].style.background = "green";
-      pointGain++;
       setTimeout(() => {
         alert("you gain a point");
+        dots[pointGain].style.background = "green";
+        pointGain++;
+        pointGain == 5 ? alert("you won the tournament......") : false;
       }, 5000);
-      pointGain == 5 ? alert("you won the tournament......") : false;
     } else if (
       (index == 0 && randomPlay == 1) ||
       (index == 1 && randomPlay == 2) ||
       (index == 2 && randomPlay == 0)
     ) {
-      dotsAi[pointlose].style.background = "green";
-      pointlose++;
-
       setTimeout(() => {
         alert("you lose a point");
+        dotsAi[pointlose].style.background = "green";
+        pointlose++;
+        pointlose == 5 ? alert("you lose the tournament......") : false;
       }, 5000);
-      pointlose == 5 ? alert("you lose the tournament......") : false;
     }
   });
 });
