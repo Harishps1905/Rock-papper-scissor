@@ -228,3 +228,55 @@
   border-radius: 50%;
   margin: auto;
 }
+
+#popup,
+.popcont {
+  position: fixed;
+  top: 0%;
+  right: 0%;
+}
+
+#popup {
+  background-color: rgba(0, 0, 0, 0.575);
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+.popcont {
+  background-image: linear-gradient(34deg, #05e8fe, #ea01fc);
+  width: 70%;
+  height: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 20px;
+}
+.poptext {
+  font-size: 50px;
+}
+.popbtn {
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  border: none;
+  font-size: 30px;
+  background-color: rgb(156, 37, 236);
+  animation: pulse 1s 1s infinite;
+}
+
+.block {
+  display: block !important;
+}
+
+.greenpoint {
+  background: green;
+  animation: pulse 1s 1s infinite;
+}
+
+.point {
+  animation: pulsegain 1s 1s infinite;
+}
